@@ -5,7 +5,7 @@ services:
     image: arjunkhade/akcode:fresh_cart_backend
     restart: always
     ports:
-      - 9090:8080 
+      - 80:8080 
     environment:
       MYSQL_HOST: mysqldb
       MYSQL_USER: root
@@ -19,9 +19,5 @@ services:
       MYSQL_ROOT_PASSWORD: root
     ports:
       - 3307:3306
-  fresh-cart-frontend:
-    container_name: fresh_cart_frontend
-    image: arjunkhade/akcode:fresh_cart_frontend
-    ports:
-      - 80:80
+  
       
