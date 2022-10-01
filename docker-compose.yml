@@ -19,6 +19,6 @@ services:
       - 3307:3306
   fresh-cart-frontend:
     container_name: fresh_cart_frontend
-    image: arjunkhade/akcode:fresh_cart_frontend
+    image: arjunkhade/akcode:fro
     ports:
       - 80:80
