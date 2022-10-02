@@ -1,8 +1,8 @@
 version: "3"
 services:
-  fresh-cart-backend:
-    container_name: fresh-cart-backend
-    image: arjunkhade/akcode:fresh-cart-backend
+  backend:
+    container_name: backend
+    image: arjunkhade/akcode:backend
     restart: always
     ports:
       - 9090:8080 
@@ -13,14 +13,14 @@ services:
       MYSQL_PORT: 3306
   mysqldb:
     container_name: mysqldb
-    image:  arjunkhade/akcode:fresh_cart_database
+    image:  arjunkhade/akcode:database
     environment:
       MYSQL_DATABASE: fresh_cart
       MYSQL_ROOT_PASSWORD: root
     ports:
       - 3307:3306
-  fresh-cart-frontend:
-    container_name: fresh_cart_frontend
-    image: arjunkhade/akcode:fresh_cart_frontend
+  frontend:
+    container_name: frontend
+    image: arjunkhade/akcode:frontend
     ports:
       - 80:80
