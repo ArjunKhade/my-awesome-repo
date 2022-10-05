@@ -20,7 +20,7 @@ services:
     ports:
       - 3307:3306
   front:
-    container_name: front
-    image: arjunkhade/akcode:f
+    container_name: frontend
+    image: arjunkhade/akcode:frontend
     ports:
       - 80:80
