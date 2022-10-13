@@ -14,6 +14,8 @@ services:
   mysqldb:
     container_name: mysqldb
     image:  arjunkhade/akcode:database
+    volumes:
+      - myapp:/var/lib/mysql
     environment:
       MYSQL_DATABASE: fresh_cart
       MYSQL_ROOT_PASSWORD: root
@@ -24,3 +26,5 @@ services:
     image: arjunkhade/akcode:frontend
     ports:
       - 80:80
+volumes:
+  myapp:
